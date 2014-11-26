@@ -1,7 +1,29 @@
----   
+---
 wordpress:
   db_name: 'wordpress'
   db_user: 'wordpress'
   db_password: 'wordpress'
 apache_vhosts:
   - {servername: "local.dev", documentroot: "/app/public"}
+php_ini:
+ - option: "engine"
+   section: "PHP"
+   value: "1"
+ - option: "error_reporting"
+   section: "PHP"
+   value: "E_ALL & ~E_DEPRECATED & ~E_STRICT"
+ - option: "ldap.max_links"
+   section: "ldap"
+   value: "1"
+ - option: "display_errors"
+   section: "PHP"
+   value: "On"
+ - option: "html_errors"
+   section: "PHP"
+   value: "On"
+ - option: "upload_max_filesize"
+   section: "PHP"
+   value: "512M"
+ - option: "post_max_size"
+   section: "PHP"
+   value: "512M"
