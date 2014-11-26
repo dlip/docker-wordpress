@@ -1,0 +1,6 @@
+.git
+.gitignore
+db
+host_vars
+host_vars_db
+fig.yml

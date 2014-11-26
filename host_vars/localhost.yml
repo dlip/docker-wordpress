@@ -1,0 +1,7 @@
+---   
+wordpress:
+  db_name: 'wordpress'
+  db_user: 'wordpress'
+  db_password: 'wordpress'
+apache_vhosts:
+  - {servername: "local.dev", documentroot: "/app/public"}

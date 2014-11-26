@@ -1,0 +1,11 @@
+---
+
+mysql_db:
+     - name: wordpress
+       import_data: /data/wordpress.sql
+
+mysql_users:
+     - name: wordpress
+       pass: wordpress
+       priv: "*.*:ALL"
+       host: "%"

@@ -1,0 +1,16 @@
+web:
+  image: dlip/centos-php-apache-wordpress
+  volumes:
+    - ./host_vars:/var/playbooks/host_vars
+    - ./wordpress:/app/public
+  ports:
+    - "8088:80"
+  links:
+    - mysql
+mysql:
+  image: dlip/centos-mysql
+  volumes:
+    - ./host_vars_db:/var/playbooks/host_vars
+    - ./db:/data
+  ports:
+    - "3307:3306"
