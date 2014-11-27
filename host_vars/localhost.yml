@@ -3,8 +3,10 @@ wordpress:
   db_name: 'wordpress'
   db_user: 'wordpress'
   db_password: 'wordpress'
+  debug: 'true'
 apache_vhosts:
   - {servername: "local.dev", documentroot: "/app/public"}
+# maybe not needed as wordpress can overwrite settings
 php_ini:
  - option: "engine"
    section: "PHP"
